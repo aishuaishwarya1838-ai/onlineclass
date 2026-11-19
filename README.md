@@ -113,4 +113,137 @@ I can also help you prepare a complete college project report with:
 - Output screenshots
 - Conclusion and bibliography
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Class Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login Page -->
+    <section id="loginPage" class="login-page">
+        <div class="login-box">
+            <h1>Online Classroom</h1>
+            <p>Welcome! Please login to continue.</p>
+
+            <form id="loginForm">
+                <input type="text" id="username"
+                       placeholder="Enter your name" required>
+                <input type="password" id="password"
+                       placeholder="Enter password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="hint">Demo: Any name and password (minimum 4 characters)</p>
+        </div>
+    </section>
+
+    <!-- Main Application -->
+    <div id="app" class="app hidden">
+
+        <aside class="sidebar">
+            <h2>📚 ClassHub</h2>
+            <p class="user-label">Student Portal</p>
+
+            <nav>
+                <button class="nav-btn active" data-page="dashboard">🏠 Dashboard</button>
+                <button class="nav-btn" data-page="courses">📖 Courses</button>
+                <button class="nav-btn" data-page="schedule">📅 Schedule</button>
+                <button class="nav-btn" data-page="assignments">📝 Assignments</button>
+                <button class="nav-btn" data-page="attendance">✅ Attendance</button>
+            </nav>
+
+            <button id="logoutBtn" class="logout">Logout</button>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div>
+                    <h1 id="pageTitle">Dashboard</h1>
+                    <p>Welcome, <span id="studentName"></span>!</p>
+                </div>
+                <div class="profile">👤 Student</div>
+            </header>
+
+            <!-- Dashboard -->
+            <section id="dashboard" class="page">
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Total Courses</h3>
+                        <h2 id="courseCount">0</h2>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Upcoming Classes</h3>
+                        <h2 id="classCount">0</h2>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Assignments</h3>
+                        <h2 id="assignmentCount">0</h2>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Attendance</h3>
+                        <h2 id="attendancePercent">0%</h2>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h2>Welcome to ClassHub</h2>
+                    <p>
+                        Manage your online learning activities from
+                        one place. Explore courses, attend classes,
+                        and complete assignments.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2>Upcoming Classes</h2>
+                    <div id="dashboardClasses"></div>
+                </div>
+            </section>
+
+            <!-- Courses -->
+            <section id="courses" class="page hidden">
+                <div class="section-heading">
+                    <h2>Available Courses</h2>
+                </div>
+                <div id="courseList" class="course-grid"></div>
+            </section>
+
+            <!-- Schedule -->
+            <section id="schedule" class="page hidden">
+                <h2>Class Schedule</h2>
+                <div id="scheduleList" class="content-card"></div>
+            </section>
+
+            <!-- Assignments -->
+            <section id="assignments" class="page hidden">
+                <h2>My Assignments</h2>
+
+                <div class="content-card">
+                    <form id="assignmentForm">
+                        <input type="text" id="assignmentName"
+                               placeholder="Assignment title" required>
+                        <input type="date" id="assignmentDate" required>
+                        <button type="submit">Add Assignment</button>
+                    </form>
+                </div>
+
+                <div id="assignmentList" class="content-card"></div>
+            </section>
+
+            <!-- Attendance -->
+            <section id="attendance" class="page hidden">
+                <h2>Attendance Record</h2>
+                <div id="attendanceList" class="content-card"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
 Is this project for BCA, BSc Computer Science, MCA, or another course?
